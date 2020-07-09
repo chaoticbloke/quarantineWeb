@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* color: green; */
+    padding:20px;
+}
+.header{
+    /* position: relative; */
+}
+.logo{
+    position: absolute;
+   height: 70px;
+   width: 70px;
+   top: 30px;
+   left: 30px;
+}
+
+img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+   
+    /* background-image: linear-gradient(to right,#gray,#222); */
+    /* cut-image */
+    /* clip-path: polygon(x y,x y,x y,x y); */
+   
+    clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+    /* clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%); */
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    opacity: .5;
+    position: absolute;
+}
+.mainText{
+    padding-left: 33px;
+    animation-name: textMove;
+    animation-duration: 1s;
+}
+.secText{
+    animation-name: secText;
+    animation-duration: 2s;
+}
+.text{
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: chartreuse;
+    /* text-align: center;
+    
+   padding-top: 25%;
+   
+    */
+}
+@keyframes textMove{
+    0%{
+        opacity: 0;
+        transform: rotate(360deg)
+
+    }
+    80%{
+        opacity: .8;
+
+    }
+
+    100%{
+        opacity: 1;
+
+    }
+}
+@keyframes secText{
+    0%{
+       transform: translateX(12px);
+
+    }
+    80%{
+        transform: translateX(-12px);
+        font-size:medium ;
+
+    }
+    100%{
+        font-size: x-large;
+        transform: translateX(12px);
+
+    }
+}
+button{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 10px;
+   margin-top: 25%;
+   margin-left: 43%;
+    /* transform: translate(-50%,-50%); */
+}
+#btn2{
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: rgb(41, 236, 243);
+   
+}
